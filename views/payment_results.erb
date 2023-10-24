@@ -1,4 +1,39 @@
-<%= @apr %>
-<%= @years %>
-<%= @principal %>
+<h1>Payment Results</h1>
 
+<div>
+APR
+<%= @apr %>
+</div>
+
+<div>
+Number of years
+<%= @years %>
+</div>
+
+<div>
+Principal
+<%= @principal %>
+</div>
+
+<!--
+
+Number of periods
+<%= @number_of_periods %>
+
+Rate per period
+<%= @rate_per_period %>
+
+Numerator
+<%= @monthly_payment_numerator %>
+
+Denominator
+<%= @monthly_payment_denominator %>
+
+-->
+
+Payment
+<%= @payment_result %>
+
+<div>
+<a href="/payment/new">Calculate another payment</a>
+</div>
