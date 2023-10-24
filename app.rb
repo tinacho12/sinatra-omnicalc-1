@@ -24,3 +24,14 @@ get("/square/new") do
   @the_result = Math.sqrt(@the_num)
   erb(:square_root_results)
  end
+
+ get("/payment/new") do
+  erb(:payment)
+ end
+
+ get("/payment/results") do
+  @apr = params.fetch("apr").to_f
+  @years = params.fetch("years").to_f
+  @principal = params.fetch("principal").to_f
+  erb(:payment_results)
+ end
