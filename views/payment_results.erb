@@ -2,7 +2,7 @@
 
 <div>
 APR
-<%= @apr %>
+<%= @apr.to_fs(:percentage, { :precision => 4 } )  %>
 
 </div>
 
@@ -13,7 +13,7 @@ Number of years
 
 <div>
 Principal
-<%= '$%.2f' % @principal %>
+<%= @principal.to_fs(:currency) %>
 </div>
 
 <!--
@@ -33,7 +33,7 @@ Denominator
 -->
 <div>
 Payment
-<%= '$%.2f' % @payment_result %>
+<%= @payment_result.to_fs(:currency) %>
 </div>
 
 <div>
