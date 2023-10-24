@@ -3,6 +3,7 @@
 <div>
 APR
 <%= @apr %>
+
 </div>
 
 <div>
@@ -12,7 +13,7 @@ Number of years
 
 <div>
 Principal
-<%= @principal %>
+<%= '$%.2f' % @principal %>
 </div>
 
 <!--
@@ -30,9 +31,10 @@ Denominator
 <%= @monthly_payment_denominator %>
 
 -->
-
+<div>
 Payment
-<%= @payment_result %>
+<%= '$%.2f' % @payment_result %>
+</div>
 
 <div>
 <a href="/payment/new">Calculate another payment</a>

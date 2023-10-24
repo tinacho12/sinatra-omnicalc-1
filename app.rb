@@ -42,5 +42,21 @@ get("/square/new") do
   @monthly_payment_denominator = 1 - (1 + @rate_per_period) ** (-1 * @number_of_periods)
 
   @payment_result = @monthly_payment_numerator / @monthly_payment_denominator
+
   erb(:payment_results)
+ end
+
+ get("/random/new") do
+  erb(:random)
+ end
+
+ get("/random/results") do
+  @min = params.fetch("min").to_f
+  @max = params.fetch("max").to_f
+
+  if @min < @max
+    @random_results = rand(@min..@max).to_f
+  else
+  end
+  erb(:random_results)
  end
